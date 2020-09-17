@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommendation System</title>
+</head>
+<body>
+	<h3>Please Pick a Category</h3>
+	{% for cat in category %}
+	<a href="{{ url_for('recommend_cat', cat_id=category.index(cat)) }}">	<span style="color:red;">[{{cat}}]</span></a>
+	{% endfor %}
+</body>
+</html>

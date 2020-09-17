@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommendation System</title>
+</head>
+<body>
+	<h3>Category Choosed</h3>
+	<span style="color:red;">{{category}}</span>	
+	<h3>Recommenation Based on Category, Click on article to recommend (Content-Based Filtering):</h3>
+	{% for art in articles %}
+	<a href="{{ url_for('recommend_art', art_id=articles.index(art), cat_id=cat_id) }}"><span style="color:red;">[{{art}}]</span></a>
+	{% endfor %}
+</body>
+</html>
